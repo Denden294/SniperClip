@@ -66,7 +66,7 @@ Installation
 
 
 
-Téléchargez SniperClip.exe.
+Téléchargez SniperClip.exe : https://github.com/Denden294/SniperClip/releases
 
 
 
