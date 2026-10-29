@@ -6,7 +6,7 @@ SniperClip est un gestionnaire de presse-papiers léger pour Windows. Il capture
 
 
 
-Auteur : Vincent VELIO
+Auteur : Vincent VELIO + AI
 
 
 
