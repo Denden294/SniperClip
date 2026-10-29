@@ -1,106 +1,42 @@
-SniperClip
+# SniperClip
 
+**SniperClip** is a lightweight clipboard manager for Windows. It captures the clipboard into a grid of clickable cells: each cell stores a piece of content (text or otherwise), can be given a background color, renamed, and re-pasted with a single click, with a preview on hover.
 
+- **Author**: Vincent VELIO + AI
+- **Version**: 1.0
+- **Platform**: Windows (PowerShell 5.1 + Windows Forms, no installation required)
+- **License**: MIT (Open source) — see the `LICENSE` file
 
-SniperClip est un gestionnaire de presse-papiers léger pour Windows. Il capture le presse-papiers dans une grille de cellules cliquables : chaque cellule mémorise un contenu (texte ou autre), peut être colorée, renommée et re-collée d'un simple clic, avec un aperçu au survol.
+## Features
 
+- Clipboard-capture cell grid, paste in one click.
+- Custom background color and name for each cell.
+- Content preview on hover, with fonts adapted to cell size.
+- Persistent history in an **SQLite** database (`%APPDATA%\SniperClip`).
+- Systray icon with a full menu (About, start with Windows, language).
+- Global show/hide shortcut (**Ctrl+Alt+V**).
+- Resizable window, full screen or half screen; size and position are remembered.
+- Taskbar Jump List (most recently used cells).
+- Configuration export / import.
 
+## Installation
 
-Auteur : Vincent VELIO + AI
+1. Download `SniperClip.exe` from the [releases page](https://github.com/Denden294/SniperClip/releases).
+2. Put it wherever you like (e.g. `%LOCALAPPDATA%\SniperClip\`) and run it: no installation is required.
+3. On first launch, Windows may display a SmartScreen warning: click "More info" and then "Run anyway" (the exe is not yet known to Microsoft).
 
+Data (database, backup, log) is stored in `%APPDATA%\SniperClip`.
 
+## Building from Source
 
-Version : 1.0
+The executable is generated from `SniperClip.ps1` with the build kit:
 
+```powershell
+powershell -ExecutionPolicy Bypass -File .\build.ps1
+```
 
+The script creates an adapted copy in `build\`, compiles it with [ps2exe](https://www.powershellgallery.com/packages/ps2exe) into `dist\SniperClip.exe`, and copies `LICENSE` and `README.md` there. Options: `-Sign -SelfSigned` to sign the exe with a local self-signed certificate, or `-Thumbprint <thumbprint>` for an OV/EV certificate.
 
-Plateforme : Windows (PowerShell 5.1 + Windows Forms, aucune installation)
+## License
 
-
-
-Licence : MIT (Open source) — voir le fichier LICENSE
-
-
-
-Fonctionnalités
-
-
-
-Grille de cellules de capture du presse-papiers, collage en un clic.
-
-
-
-Couleur de fond et nom personnalisables par cellule.
-
-
-
-Aperçu du contenu au survol, polices adaptées à la taille des cellules.
-
-
-
-Historique persistant dans une base SQLite (%APPDATA%\\SniperClip).
-
-
-
-Icône systray avec menu complet (About, démarrage avec Windows, langue).
-
-
-
-Raccourci global d'affichage/masquage (Ctrl+Alt+V).
-
-
-
-Fenêtre agrandissable, plein écran ou moitié d'écran ; la taille et la position sont mémorisées.
-
-
-
-Jump List de la barre des tâches (cellules les plus récentes).
-
-
-
-Export / import de la configuration.
-
-
-
-Installation
-
-
-
-Téléchargez SniperClip.exe : https://github.com/Denden294/SniperClip/releases
-
-
-
-Placez-le où vous voulez (par ex. %LOCALAPPDATA%\\SniperClip\\) et lancez-le : aucune installation n'est requise.
-
-
-
-Au premier lancement, Windows peut afficher un avertissement SmartScreen : cliquez sur « Informations complémentaires » puis « Exécuter quand même » (l'exe n'est pas encore connu de Microsoft).
-
-
-
-Les données (base, sauvegarde, journal) sont stockées dans %APPDATA%\\SniperClip.
-
-
-
-Compilation depuis les sources
-
-
-
-L'exécutable est généré à partir de SniperClip.ps1 avec le kit de build :
-
-
-
-powershell -ExecutionPolicy Bypass -File .\\build.ps1
-
-
-
-Le script crée une copie adaptée dans build\\, la compile avec ps2exe dans dist\\SniperClip.exe et y copie LICENSE et README.md. Options : -Sign -SelfSigned pour signer l'exe avec un certificat auto-signé local, ou -Thumbprint <empreinte> pour un certificat OV/EV.
-
-
-
-Licence
-
-
-
-Code distribué sous licence MIT — voir le fichier LICENSE. Vous êtes libre de l'utiliser, de le modifier et de le redistribuer, à condition de conserver la mention de copyright.
-
+Code distributed under the **MIT** license — see the `LICENSE` file. You are free to use, modify, and redistribute it, provided you keep the copyright notice.
