@@ -1,7 +1,3 @@
-Enregistrez ce texte dans un fichier nommé README.md, placé dans le dossier contenant SniperClip.ps1. Le kit de build le copiera automatiquement dans dist\\ à chaque compilation.
-
-
-
 SniperClip
 
 
